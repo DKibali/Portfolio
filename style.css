@@ -1,99 +1,182 @@
+/* =========================
+   GLOBAL RESET & VARIABLES
+========================= */
+:root {
+    --primary: #2c3e50;
+    --primary-dark: #1a252f;
+    --accent: #2600ff;
+    --bg-light: #f4f6f8;
+    --text-dark: #333;
+    --white: #ffffff;
+}
 
-
-    /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body */
+/* =========================
+   BODY
+========================= */
 body {
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #333;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
-/* Header */
-.header {
-    background-color: #1f2933;
-    color: #ffffff;
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: var(--primary);
+    color: var(--white);
     text-align: center;
     padding: 40px 20px;
 }
 
-.header h1 {
+header h1 {
     font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-.header p {
-    margin-top: 10px;
+header p {
     font-size: 1.1rem;
-    color: #cbd5e1;
+    font-weight: 300;
 }
 
-/* Navigation */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
-    background-color: #111827;
-    display: flex;
-    justify-content: center;
+    background-color: #333;
+    text-align: center;
     padding: 10px 0;
 }
 
 .navbar a {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
     margin: 0 15px;
-    font-weight: 500;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #38bdf8;
+    color: var(--accent);
 }
 
-/* Main Container */
+/* =========================
+   MAIN CONTAINER
+========================= */
 .container {
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
 section {
-    background: #ffffff;
-    padding: 25px;
     margin-bottom: 30px;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 section h2 {
     margin-bottom: 15px;
-    color: #1f2933;
+    color: var(--primary);
 }
 
-/* Skills list */
+/* =========================
+   TEXT & LISTS
+========================= */
+p {
+    margin-bottom: 20px;
+}
+
 ul {
-    list-style-type: square;
-    padding-left: 20px;
+    margin-left: 20px;
+    text-align: left;
 }
 
-/* Links */
-a {
-    color: #1809eb;
+li {
+    margin-bottom: 8px;
 }
 
-a:hover {
-    text-decoration: underline;
+/* =========================
+   IMAGE
+========================= */
+.container img {
+    width: 102%;
+    max-width: px;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
-/* Footer */
-.footer {
+/* =========================
+   BUTTON
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
     text-align: center;
     padding: 20px;
-    background-color: #e5e7eb;
-    color: #555;
-    margin-top: 40px;
+    margin-top: 50px;
+    font-size: 14px;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+.module-image {
+    width: 90%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+
+/* Sections */ section { margin-bottom: 40px; background-color: white; padding: 20px 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
